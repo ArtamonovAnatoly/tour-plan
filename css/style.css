@@ -378,13 +378,13 @@ template {
   padding-bottom: 40px;
 }
 
+.navbar-top__menu-button {
+  display: none;
+}
+
 .navbar__search {
   margin-right: auto;
   margin-left: 108px;
-}
-
-.navbar__menu-button {
-  display: none;
 }
 
 .navbar-bottom {
@@ -531,6 +531,7 @@ template {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
     width: 16px;
     height: 11px;
     border: none;
