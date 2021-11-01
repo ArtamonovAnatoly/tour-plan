@@ -73,7 +73,7 @@
       grid-row-gap: 40px
     &__input
       flex-basis: 49%
-    &__logo
+    &__logo-link
       grid-row: 1 / 2
       grid-column: span 2
     &__social
@@ -95,6 +95,12 @@
       &-form
         grid-column: span 5
         grid-row: 4
+    &__bottom
+      grid-column: span 6
+      margin-top: 43px
+      margin-bottom: 13px
+    &__disclaimer
+      margin-left: 0
 
 @media(max-width: 768px)
   .container
@@ -204,6 +210,11 @@
   .footer
     &__input
       flex-basis: 100%
+    &__bottom
+      grid-column: span 6
+    &__disclaimer
+      min-width: 320px
+      margin-left: 0%
 @media(max-width: 576px)
   .logo
     width: 99px
@@ -245,15 +256,22 @@
       text-transform: uppercase
       margin-bottom: 36px
   .footer
+    padding: 20px
     &-wrapper
       grid-template-columns: 1fr
-    &__logo
+    &__logo-link
       grid-row: 1
       grid-column: 1
+      width: 104px
+      height: 120px
     &__social
       &-network
         grid-row: 2
         grid-column: 1
+        flex-direction: column
+      &-links
+
+        margin-top: 22px
     &__additional
       grid-row: 3
       grid-column: 1
@@ -271,16 +289,23 @@
         grid-row: 7
         grid-column: 1
     &__message
-      width: 98%
+      width: 100%
     &__form
       display: grid
 
     &__info
       grid-row: 8
-      grid-column: 1
+      grid-column:
+      margin-bottom: 15px
     &__button
       grid-row: 9
       max-width: 160px
+    &__bottom
+      flex-wrap: wrap
+      height: auto
+      margin-top: 10px
+      margin-bottom: 20px
+    &__disclaimer
 
 @media ( max-width: 480px )
   .hotel
@@ -297,3 +322,6 @@
       min-height: 670px
   .hotel__slider
     margin-bottom: 0
+  .footer
+    &__disclaimer
+      min-width: 320px
