@@ -42,6 +42,11 @@ var modalOverlay = $('.modal__overlay');
 var modalDialog = $('.modal__dialog');
 modalOverlay.addClass('modal__overlay--visible');
 modalDialog.addClass('modal__dialog--visible');
+
+// When the modal is shown, we want a fixed body
+document.body.style.position = 'fixed';
+document.body.style.top = `-${window.scrollY}px`;
+
 }
 function closeModal(event) {
   event.preventDefault();
@@ -49,6 +54,12 @@ var modalOverlay = $('.modal__overlay');
 var modalDialog = $('.modal__dialog');
 modalOverlay.removeClass('modal__overlay--visible');
 modalDialog.removeClass('modal__dialog--visible');
+// Когда модальное окно скрыто...
+//const scrollY = document.body.style.top;
+document.body.style.position = '';
+document.body.style.top = '';
+window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
 }
 
 
