@@ -68,7 +68,7 @@
     color: inherit
   &__form
     display: flex
-    align-items: center
+    align-items: baseline
     justify-content: space-between
     flex-wrap: wrap
 
@@ -76,13 +76,14 @@
     width: 100%
     &-group
 
-      margin-bottom: 15px
+      margin-bottom: 0px
       flex-basis: 48%
   &__message
 
     width: 539px
     height: 123px
     flex-basis: 100%
+    margin-top: 15px
     margin-bottom: 23px
     resize: none
   &__button
@@ -106,7 +107,7 @@
     justify-content: space-between
     color: $light
   &__disclaimer
-    max-width: 350px
+    min-width: 350px
     display: flex
     list-style-type: none
     padding: 0

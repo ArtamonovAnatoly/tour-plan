@@ -30,6 +30,8 @@ var menuButton = document.querySelector('.menu-button');
 menuButton.addEventListener('click', function () {
 console.log('клик по кнопке меню');
 document.querySelector('.navbar-bottom').classList.toggle('navbar-bottom--visible');
+// When the modal is shown, we want a fixed body
+document.body.classList.toggle('fixed');
 });
 
 var modalButton = $('[data-toggle=modal]')
@@ -64,7 +66,7 @@ $(this).validate({
   messages: {
     name: {
       required: "Please specify your name",
-      minlength: "name, required to contain minimum 2 symbols"
+      minlength: "specify at least 2 symbols"
     },
     email: {
       required: "We need your email address to contact you",

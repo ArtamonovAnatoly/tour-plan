@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>Best Tour Plan - Hotel Booking</title>
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
   <link
@@ -42,9 +43,9 @@
         </a>
         <!-- /.user -->
 
-        <botton class="menu-button navbar-top__menu-button">
+        <button class="menu-button navbar-top__menu-button">
           <span class="menu-button__line"></span><span class="menu-button__line"></span><span class="menu-button__line"></span>
-        </botton> 
+        </button> 
       </div>
       <!-- /.navbar-top -->
 
@@ -192,7 +193,7 @@
           <div class="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.041151362297!2d98.29469259999999!3d7.890763799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503b7bfcd9f903%3A0xf7065fac1e3d7c48!2sDoubleTree%20by%20Hilton%20Phuket%20Banthai%20Resort!5e0!3m2!1sru!2sru!4v1634903889781!5m2!1sru!2sru"
-              width="100%" height="213" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              width="347" height="213" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <!-- /.map -->
         </div>
@@ -210,15 +211,18 @@
           Newsletter
         </span>
       </h2>
-      <form action="#" class="subscribe newsletter__subscribe" data-aos="fade-left"
-     
+      <form action="send.php" method="post" class="subscribe newsletter__subscribe form" data-aos="fade-left"
      
      data-aos-delay="700"
-     data-aos-duration="500">
-        <input type="text" class="subscribe__input" placeholder="Your email address">
-        <button class="subscribe__button">
-          send
-        </button>
+     data-aos-duration="500"
+     >
+       
+          <input type="email" class="subscribe__input" placeholder="Your email address" name="email" required>
+       
+          <button class="subscribe__button">
+            send
+          </button>
+       
       </form>
 
     </div>
@@ -359,6 +363,7 @@
         
       </div>
       <!-- /.activities-wrapper -->
+    </div>
     <!-- /.container -->
   </section>
   <!-- /.activities -->
@@ -418,10 +423,17 @@
            <p class="footer__text">Feel free to contact us by phone, email or by our contact form</p>
            <ul class="footer__ul">
              <li class="footer__item footer__item--mb-2"><div class="footer__icon-wrapper"><img class="footer__icon" src="img/map-marker.svg" alt="icon: map-marker"></div>9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States</li>
-             <li class="footer__item footer__item--mb-2"><div class="footer__icon-wrapper"><img class="footer__icon" src="img/footer-phone-call.svg" alt="icon: phone-call"></div>Tel (business hours) : 269 1500<br>
-             Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm)<br>
-            Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)</li>
-             <li class="footer__item footer__item--mb-2"><div class="footer__icon-wrapper"><img class="footer__icon" src="img/email.svg" alt="icon: email"></div>cherly.lawson@example.com</li>
+             <li class="footer__item footer__item--mb-2">
+               <div class="footer__icon-wrapper"><img class="footer__icon" src="img/footer-phone-call.svg" alt="icon: phone-call"></div>
+               <div>
+                Tel (business hours) : <a href="tel:01234567890">269 1500</a><br>Tel (hotline) Monday - Saturday: <a
+                  href="tel:01234567890">52-56-61-38</a> (08:00 am – 20:00 pm)<br>Tel (hotline) Sunday: <a
+                  href="tel:01234567890">52-56-61-38</a> (08:00 am – 14:00 pm)
+               </div>
+            </li>
+             <li class="footer__item footer__item--mb-2">
+               <div class="footer__icon-wrapper"><img class="footer__icon" src="img/email.svg" alt="icon: email"></div><a href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
+              </li>
            </ul>
         </div>
         <!-- /.footer__contact-details -->
@@ -429,7 +441,7 @@
           <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
           <form action="send.php" method="post" class="footer__form form">
            <div class="footer__input-group">
-              <input type="text" class="input footer__input" placeholder="Your Full Name*" name='name' required>
+              <input type="text" class="input footer__input" placeholder="Your Full Name*" name='name' required minlength="2">
            </div>
             <div class="footer__input-group">
               <input type="tel" class="phone input footer__input" placeholder="Phone Number*" name='phone' required>
@@ -438,7 +450,7 @@
             
             class="message footer__message" 
             placeholder="Message"
-            name='message'
+            name='message'            
             ></textarea>
             <button class="button footer__button">Send</button>
             <span class="footer__info">* Required Fields</span>
