@@ -206,7 +206,7 @@
         margin-left: 0
     &-right
       flex-direction: column
-      min-height: 450px
+      min-height: 460px
     &__slider
       margin-bottom: 20px
   .card
@@ -238,6 +238,7 @@
       font-size: 12px
       line-height: 15px
   .reviews
+    padding-bottom: 60px
     &__title
       font-style: normal
       font-weight: bold
@@ -246,6 +247,8 @@
       text-align: center
       text-transform: uppercase
     &-slider
+
+      overflow:
       &__item
         max-width: 580px
         padding: 0 30px 30px
@@ -265,7 +268,10 @@
   .activities
     padding-top: 60px
     padding-bottom: 70px
+    &__title
+      margin-top: 0
   .footer
+    padding-top: 73px
     &__input
       &-group
         flex-basis: 100%
@@ -320,7 +326,7 @@
       text-transform: uppercase
       margin-bottom: 36px
   .footer
-    padding: 20px
+    padding: 73px 0 20px 0
     &-wrapper
       grid-template-columns: 1fr
     &__logo-link
@@ -383,13 +389,63 @@
     &__slider
       margin-bottom: 20px
 @media ( max-width: 320px )
-  .slider
-    height: 200px
+
+  .navbar
+    width: 320px
+    &-top
+      height: 70px
+      width: 294px
+  .breadcrumb-list
+    padding-top: 19px
+    padding-bottom: 18px
+
   .hotel
+    padding-top: 5PX
+    padding-bottom: 57px
+    &-slider
+      height: 179px
+    &-info
+      &__text
+        padding-bottom: 20px
     &-grid
-      min-height: 670px
-  .hotel__slider
-    margin-bottom: 0
+      min-height: 650px
+
+    &__slider
+      margin-bottom: 0
+  .slider
+
+    height: 200px
+  .map
+    height: 172px
+  .newsletter
+    height: 319px
+  .reviews
+    &-slider
+      max-height: 438px
+      overflow: hidden
+      &__item
+        margin-bottom: 50px
+    &__title
+      width: 245px
+      margin-bottom: 38px
+      margin-left: auto
+      margin-right: auto
+  .activities
+    padding-top: 40px
+    padding-bottom: 40px
+    &__title
+      margin-top: 0
+  .card
+    height: 255px
+
   .footer
+    padding-top: 69px
+    &__logo-link
+      padding-bottom: 32px
     &__disclaimer
       min-width: 320px
+      font-size: 10px
+      margin-left: -4%
+  .search
+    &__input
+      width: 243px
