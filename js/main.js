@@ -2,7 +2,8 @@ $(document).ready(function () {
 const hotelSlider = new Swiper('.hotel-slider', {
   // Optional parameters
     loop: true,
-
+//автовысота
+    autoHeight: true,
  
   // Navigation arrows
   navigation: {
